@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- 打开的书 + 书页线条 + 星芒（adaptive 安全区版） -->
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M54,38C47,33 38,32 31,34C29,35 28,37 28,40V72C28,74 29,76 31,77C38,79 47,78 54,73Z" />
+    <path android:fillColor="#E3ECFF"
+        android:pathData="M54,38C61,33 70,32 77,34C79,35 80,37 80,40V72C80,74 79,76 77,77C70,79 61,78 54,73Z" />
+    <path android:strokeColor="#3B6EF6" android:strokeWidth="2.6" android:strokeLineCap="round"
+        android:pathData="M34,46H47 M34,55H47 M34,64H43 M61,46H74 M61,55H74 M61,64H71" />
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M54,26L55.8,31.2L61,33L55.8,34.8L54,40L52.2,34.8L47,33L52.2,31.2Z" />
+</vector>

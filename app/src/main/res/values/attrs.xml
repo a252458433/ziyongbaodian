@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    柔光漫画 2.0 主题属性。
+    所有自定义 attr 都必须在 Theme.ZiyongBaodian（基础主题）里给出默认值，
+    这样 6 套子主题（点号隐式继承）与对话框 overlay 都能安全解析 ?attr/...
+-->
+<resources>
+    <!-- 主题主色衍生：浅底 + 顶部渐变三段色 -->
+    <attr name="colorBrandLight" format="color" />
+    <attr name="colorBrandG1" format="color" />
+    <attr name="colorBrandG2" format="color" />
+    <attr name="colorBrandG3" format="color" />
+    <attr name="colorBrandGlow" format="color" />
+
+    <!-- 表面 / 描边 / 水波纹 / 主色上的文字 -->
+    <attr name="colorSurfaceAlt" format="color" />
+    <attr name="colorOutline" format="color" />
+    <attr name="colorRipple" format="color" />
+    <attr name="colorOnBrand" format="color" />
+
+    <!-- 首页头部背景（渐变 + 光晕 + 网点），随主题切换 -->
+    <attr name="headerBackground" format="reference" />
+    <!-- 首页头部内容色（标题 / 设置 / 提示文字） -->
+    <attr name="headerContentColor" format="color" />
+    <!-- 首页顶部标题文案 -->
+    <attr name="appNameText" format="string" />
+    <!-- 首页标题下方一行副标题 -->
+    <attr name="headerSubtitle" format="string" />
+</resources>

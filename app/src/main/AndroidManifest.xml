@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/author_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ZiyongBaodian">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--
+            桌面入口：六 alias 随应用内主题切换（Themes.applyLauncherAlias 动态启停）。
+            漫画粉 → LauncherPink「即梦漫画」  石墨灰 → LauncherGray「沉溺漫画」
+            品牌蓝 → LauncherBlue「自用宝典」  活力橙 → LauncherTorch「手电筒」
+            薄荷青 → LauncherMint「青柠笔记」  星野紫 → LauncherAurora「星野笔记」
+            启动器图标统一为柔光漫画 2.0 构图（书本 + 星芒 + 主题渐变）。
+            注意：六个 alias 同时只能启用一个，否则桌面出现多个入口。
+        -->
+        <activity-alias
+            android:name=".LauncherGray"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_manga"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_manga"
+            android:targetActivity=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".LauncherPink"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_manga_pink"
+            android:label="@string/app_name_pink"
+            android:roundIcon="@mipmap/ic_launcher_manga_pink"
+            android:targetActivity=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".LauncherBlue"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_blue"
+            android:label="@string/app_name_blue"
+            android:roundIcon="@mipmap/ic_launcher_blue"
+            android:targetActivity=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".LauncherTorch"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_torch"
+            android:label="@string/app_name_torch"
+            android:roundIcon="@mipmap/ic_launcher_torch"
+            android:targetActivity=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".LauncherMint"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_mint"
+            android:label="@string/app_name_mint"
+            android:roundIcon="@mipmap/ic_launcher_mint"
+            android:targetActivity=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".LauncherAurora"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_aurora"
+            android:label="@string/app_name_aurora"
+            android:roundIcon="@mipmap/ic_launcher_aurora"
+            android:targetActivity=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name=".ui.SearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.DemoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.TikuActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ImportActivity"
+            android:screenOrientation="portrait" android:exported="true" android:windowSoftInputMode="adjustResize">
+            <!--
+                其他 App（微信 / QQ / 文件管理器等）里点「用其他应用打开」题库文件时列出本应用。
+                octet-stream 是微信等收文件时常见的兜底 MIME；docx 的完整 MIME 也单独列出。
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="text/*" />
+                <data android:mimeType="application/json" />
+                <data android:mimeType="application/msword" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                <data android:mimeType="application/octet-stream" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.PracticeActivity"
+            android:screenOrientation="portrait" android:exported="false" />
+        <activity
+            android:name=".ui.QuestionListActivity"
+            android:screenOrientation="portrait" android:exported="false" />
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:screenOrientation="portrait" android:exported="false" />
+        <activity
+            android:name=".ui.GuideActivity"
+            android:screenOrientation="portrait" android:exported="false" />
+        <activity
+            android:name=".ui.AboutActivity"
+            android:screenOrientation="portrait" android:exported="false" />
+
+        <service
+            android:name=".service.ScreenSearchService"
+            android:exported="true"
+            android:label="@string/screen_search"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+    </application>
+
+</manifest>

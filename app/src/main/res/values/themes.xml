@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    柔光漫画 2.0 —— 六套完整主题。
+    顺序与 Themes.ALL / ALIASES / AndroidManifest 的 activity-alias 一一对应：
+    0 漫画粉 / 1 石墨灰 / 2 品牌蓝 / 3 活力橙 / 4 薄荷青 / 5 星野紫
+    所有自定义 attr 在基础主题里都有默认值，悬浮窗（ContextThemeWrapper 基础主题）与
+    对话框 overlay 也能安全解析。
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.ZiyongBaodian" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/brand</item>
+        <item name="colorPrimaryDark">@color/brand_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/ok</item>
+        <item name="colorSurface">@color/card</item>
+        <item name="colorOnSurface">@color/text</item>
+        <item name="colorControlHighlight">@color/ripple_soft</item>
+
+        <item name="colorBrandLight">@color/brand_light</item>
+        <item name="colorBrandG1">@color/brand_gradient_start</item>
+        <item name="colorBrandG2">@color/brand_gradient_center</item>
+        <item name="colorBrandG3">@color/brand_gradient_end</item>
+        <item name="colorBrandGlow">@color/header_glow</item>
+        <item name="colorSurfaceAlt">@color/surface_alt</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorRipple">@color/ripple_soft</item>
+        <item name="colorOnBrand">@color/on_brand</item>
+
+        <item name="headerBackground">@drawable/bg_header_blue</item>
+        <item name="headerContentColor">#FFFFFFFF</item>
+        <item name="appNameText">@string/app_name_blue</item>
+        <item name="headerSubtitle">@string/header_subtitle</item>
+
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+        <item name="materialAlertDialogTheme">@style/Theme.ZiyongBaodian.Dialog</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- 对话框 overlay：补齐自定义 attr 默认值，任何 drawable 都能安全解析 -->
+    <style name="Theme.ZiyongBaodian.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorBrandLight">@color/brand_light</item>
+        <item name="colorBrandG1">@color/brand_gradient_start</item>
+        <item name="colorBrandG2">@color/brand_gradient_center</item>
+        <item name="colorBrandG3">@color/brand_gradient_end</item>
+        <item name="colorBrandGlow">@color/header_glow</item>
+        <item name="colorSurfaceAlt">@color/surface_alt</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorRipple">@color/ripple_soft</item>
+        <item name="colorOnBrand">@color/on_brand</item>
+        <item name="headerBackground">@drawable/bg_header_blue</item>
+        <item name="headerContentColor">#FFFFFFFF</item>
+        <item name="appNameText">@string/app_name_blue</item>
+        <item name="headerSubtitle">@string/header_subtitle</item>
+    </style>
+
+    <!-- ============ 0 漫画粉 · 即梦漫画 ============ -->
+    <style name="Theme.ZiyongBaodian.Manga">
+        <item name="colorPrimary">@color/t_manga</item>
+        <item name="colorPrimaryDark">#D63D74</item>
+        <item name="colorBrandLight">#FFEDF4</item>
+        <item name="colorBrandG1">#FF86B6</item>
+        <item name="colorBrandG2">#F9538F</item>
+        <item name="colorBrandG3">#B45CE8</item>
+        <item name="colorBrandGlow">#66FFFFFF</item>
+        <item name="colorRipple">#33F9538F</item>
+        <item name="headerBackground">@drawable/bg_header_manga</item>
+        <item name="headerContentColor">#FFFFFFFF</item>
+        <item name="appNameText">@string/app_name_pink</item>
+    </style>
+
+    <!-- ============ 1 石墨灰 · 沉溺漫画 ============ -->
+    <style name="Theme.ZiyongBaodian.Gray">
+        <item name="colorPrimary">@color/t_gray</item>
+        <item name="colorPrimaryDark">#333947</item>
+        <item name="colorBrandLight">#EEF1F6</item>
+        <item name="colorBrandG1">#FAFBFD</item>
+        <item name="colorBrandG2">#EDEFF4</item>
+        <item name="colorBrandG3">#D8DEE8</item>
+        <item name="colorBrandGlow">#7AFFFFFF</item>
+        <item name="colorRipple">#1F4A505C</item>
+        <item name="headerBackground">@drawable/bg_header_gray</item>
+        <item name="headerContentColor">@color/ink</item>
+        <item name="appNameText">@string/app_name</item>
+    </style>
+
+    <!-- ============ 2 品牌蓝 · 自用宝典（首次安装默认） ============ -->
+    <style name="Theme.ZiyongBaodian.Blue">
+        <item name="colorPrimary">@color/t_blue</item>
+        <item name="colorPrimaryDark">#2451D8</item>
+        <item name="colorBrandLight">#EAF1FF</item>
+        <item name="colorBrandG1">#4E8BFF</item>
+        <item name="colorBrandG2">#3B6EF6</item>
+        <item name="colorBrandG3">#6C6BEF</item>
+        <item name="colorBrandGlow">#55FFFFFF</item>
+        <item name="colorRipple">#333B6EF6</item>
+        <item name="headerBackground">@drawable/bg_header_blue</item>
+        <item name="headerContentColor">#FFFFFFFF</item>
+        <item name="appNameText">@string/app_name_blue</item>
+    </style>
+
+    <!-- ============ 3 活力橙 · 手电筒 ============ -->
+    <style name="Theme.ZiyongBaodian.Torch">
+        <item name="colorPrimary">@color/t_orange</item>
+        <item name="colorPrimaryDark">#C97200</item>
+        <item name="colorBrandLight">#FFF3E0</item>
+        <item name="colorBrandG1">#FFB347</item>
+        <item name="colorBrandG2">#F79009</item>
+        <item name="colorBrandG3">#FF7B54</item>
+        <item name="colorBrandGlow">#5CFFFFFF</item>
+        <item name="colorRipple">#33F79009</item>
+        <item name="headerBackground">@drawable/bg_header_orange</item>
+        <item name="headerContentColor">#FFFFFFFF</item>
+        <item name="appNameText">@string/app_name_torch</item>
+    </style>
+
+    <!-- ============ 4 薄荷青 · 青柠笔记（1.8.7-ui 新增） ============ -->
+    <style name="Theme.ZiyongBaodian.Mint">
+        <item name="colorPrimary">@color/t_mint</item>
+        <item name="colorPrimaryDark">#0B8A62</item>
+        <item name="colorBrandLight">#E4F8F0</item>
+        <item name="colorBrandG1">#4AE0AE</item>
+        <item name="colorBrandG2">#10B981</item>
+        <item name="colorBrandG3">#0E94A5</item>
+        <item name="colorBrandGlow">#5AFFFFFF</item>
+        <item name="colorRipple">#3310B981</item>
+        <item name="headerBackground">@drawable/bg_header_mint</item>
+        <item name="headerContentColor">#FFFFFFFF</item>
+        <item name="appNameText">@string/app_name_mint</item>
+    </style>
+
+    <!-- ============ 5 星野紫 · 星野笔记（1.8.7-ui 新增） ============ -->
+    <style name="Theme.ZiyongBaodian.Aurora">
+        <item name="colorPrimary">@color/t_aurora</item>
+        <item name="colorPrimaryDark">#5B3FE0</item>
+        <item name="colorBrandLight">#F1ECFF</item>
+        <item name="colorBrandG1">#A98BFF</item>
+        <item name="colorBrandG2">#7A5AF8</item>
+        <item name="colorBrandG3">#4F46E5</item>
+        <item name="colorBrandGlow">#59FFFFFF</item>
+        <item name="colorRipple">#337A5AF8</item>
+        <item name="headerBackground">@drawable/bg_header_aurora</item>
+        <item name="headerContentColor">#FFFFFFFF</item>
+        <item name="appNameText">@string/app_name_aurora</item>
+    </style>
+
+    <!-- ============ 通用样式 ============ -->
+    <style name="CardWhite">
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">@color/card</item>
+        <item name="strokeColor">@color/outline</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="CardSoft">
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">@color/surface_alt</item>
+        <item name="strokeColor">@color/outline</item>
+        <item name="strokeWidth">0.8dp</item>
+    </style>
+
+    <style name="TextTitle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="TextHeadline">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextBody">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+    </style>
+
+    <style name="TextSub">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_sub</item>
+    </style>
+
+    <style name="TextCaption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/text_hint</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="SectionLabel">
+        <item name="android:textSize">12.5sp</item>
+        <item name="android:textColor">@color/text_sub</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.06</item>
+    </style>
+
+    <style name="ToolbarTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="PillButton">
+        <item name="android:textSize">12.5sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_desc">用于读取屏幕上的题目文字，并在悬浮窗中显示本地题库的答案。所有数据仅在本机处理，不联网、不上传。</string>
+
+    <string name="guide_step1">开启无障碍服务</string>
+    <string name="guide_step1_desc">在系统「无障碍 / 已安装的服务」中找到「漫画刷题」并开启，用于读取屏幕上的题目文字。</string>
+    <string name="guide_step2">允许悬浮窗</string>
+    <string name="guide_step2_desc">部分机型需要允许「显示在其他应用上层」，浮窗才能正常显示。</string>
+    <string name="guide_step3">导入题库</string>
+    <string name="guide_step3_desc">导入 txt / json / csv 题库文件，或直接粘贴文本，格式说明在导入页内。</string>
+</resources>

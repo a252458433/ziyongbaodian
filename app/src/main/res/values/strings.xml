@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">沉溺漫画</string>
+    <string name="app_slogan">漫画刷题</string>
+    <string name="header_subtitle">屏上搜题 · 一秒出答案</string>
+
+    <string name="nav_practice">练习</string>
+    <string name="nav_mine">我的</string>
+
+    <string name="search_hint">粘贴题目文字，立即搜题</string>
+    <string name="screen_search">屏幕搜题</string>
+    <string name="author_name">自用宝典</string>
+    <string name="manual_search">手动搜题</string>
+    <string name="import_bank">导入题库</string>
+    <string name="manage_bank">题库管理</string>
+    <string name="practice_order">顺序练习</string>
+    <string name="wrong_book">错题本</string>
+    <string name="favorites">收藏夹</string>
+    <string name="settings">设置</string>
+
+    <string name="guide_title">使用指引</string>
+
+    <!-- 桌面图标与名称套装（activity-alias 的 label，运行时只能在这些预置项之间切换） -->
+    <string name="app_name_1">自用宝典</string>
+    <string name="app_name_2">计算器</string>
+    <string name="app_name_3">手电筒</string>
+    <string name="app_name_4">随身笔记</string>
+    <string name="app_name_5">备忘清单</string>
+    <string name="app_name_6">单词卡片</string>
+    <string name="app_name_7">沉溺漫画</string>
+    <string name="app_name_pink">即梦漫画</string>
+    <string name="app_name_blue">自用宝典</string>
+    <string name="app_name_torch">手电筒</string>
+    <!-- 1.8.7-ui 新增两套主题对应的桌面名称 -->
+    <string name="app_name_mint">青柠笔记</string>
+    <string name="app_name_aurora">星野笔记</string>
+</resources>

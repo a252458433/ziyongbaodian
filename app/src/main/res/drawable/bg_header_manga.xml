@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 柔光漫画头部：三段渐变 + 右上光晕 + 网点纸 + 底部大圆角 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="315"
+                android:startColor="#FF86B6"
+                android:centerColor="#F9538F"
+                android:endColor="#B45CE8"
+                android:type="linear" />
+            <corners
+                android:bottomLeftRadius="30dp"
+                android:bottomRightRadius="30dp"
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp" />
+        </shape>
+    </item>
+    <item android:top="0dp" android:left="140dp" android:bottom="40dp" android:right="0dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#66FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:type="radial"
+                android:gradientRadius="220dp"
+                android:centerX="0.5"
+                android:centerY="0.5" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/halftone_tile"
+            android:tileMode="repeat" />
+    </item>
+</layer-list>

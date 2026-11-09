@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_float_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 顶栏：左框选图标，中间答案，右关闭 -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="30dp"
+            android:orientation="horizontal"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp">
+
+            <ImageView
+                android:id="@+id/btn_range"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="3dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_frame"
+                app:tint="#B3FFFFFF" />
+
+            <LinearLayout
+                android:id="@+id/answer_box"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="2dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv_answer_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:text="答案"
+                    android:textColor="#8FFFFFFF"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_answer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="—"
+                    android:textColor="@color/ok"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_close"
+                app:tint="#B3FFFFFF" />
+        </LinearLayout>
+
+        <!-- 内容区，底部按钮悬浮在两角 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="30dp"
+                    android:text="题库初始化中…"
+                    android:textColor="@color/float_text"
+                    android:textSize="12sp" />
+            </ScrollView>
+
+            <!-- 悬浮按钮层：左最小化，右缩放（与顶栏按钮同尺寸，无背景） -->
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp">
+
+                <ImageView
+                    android:id="@+id/btn_min"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_minimize"
+                    app:tint="#B3FFFFFF" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <!-- 缩放热区做大，图标无背景 -->
+                <FrameLayout
+                    android:id="@+id/resize"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="1"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/resize_icon"
+                        android:layout_width="36dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical|end"
+                        android:paddingStart="9dp"
+                        android:paddingEnd="9dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_expand"
+                        app:tint="#E6FFFFFF" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

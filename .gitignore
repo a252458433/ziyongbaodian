@@ -1,0 +1,25 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.hprof
+
+# 发布签名与口令：绝不入库
+/keystore.properties
+/keystore/*.jks
+/keystore/*.keystore
+
+# 本机专属 / 构建产物
+*.apk
+*.zip
+*.jks
+*.keystore
+
+# 真机截图（含设备状态栏与桌面信息），仅本地留存
+/design/实拍_*.png
+/design/UI美化_真机实拍.png
